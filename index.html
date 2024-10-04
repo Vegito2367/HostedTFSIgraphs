@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Modern Card Layout</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+  body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f7fa;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  text-align: center;
+  max-width: 1200px;
+  padding: 20px;
+}
+
+h1 {
+  color: #333;
+  margin-bottom: 30px;
+}
+
+.card-grid {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 5%;
+  gap: 30px;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  transition: transform 0.3s ease;
+  width: 10rem;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+}
+
+h2 {
+  margin-bottom: 10px;
+  color: #555;
+}
+
+button {
+  background-color: #007bff;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .card-grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  }
+}
+
+</style>
+<body>
+  <div class="container">
+    <h1>Graphs</h1>
+    <div class="card-grid">
+      <div class="card">
+        <h2>Ag Graph</h2>
+        <button onclick="navigateTo('./AgGraph.html')">Graph</button>
+      </div>
+      <div class="card">
+        <h2>Au Graph</h2>
+        <button onclick="navigateTo('./AuGraph.html')">Graph</button>
+      </div>
+      <div class="card">
+        <h2>Cu Graph</h2>
+        <button onclick="navigateTo('./CuGraph.html')">Graph</button>
+      </div>
+      <div class="card">
+        <h2>Fe Graph</h2>
+        <button onclick="navigateTo('./FeGraph.html')">Graph</button>
+      </div>
+    </div>
+    <div class="card-grid">
+      <div class="card">
+        <h2>Hg Graph</h2>
+        <button onclick="navigateTo('./HgGraph.html')">Graph</button>
+      </div>
+      <div class="card">
+        <h2>Pd Graph</h2>
+        <button onclick="navigateTo('./PdGraph.html')">Graph</button>
+      </div>
+      <div class="card">
+        <h2>Pt Graph</h2>
+        <button onclick="navigateTo('./PtGraph.html')">Graph</button>
+      </div>
+      <div class="card">
+        <h2>Ru Graph</h2>
+        <button onclick="navigateTo('./RuGraph.html')">Graph</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function navigateTo(url) {
+    window.location.href = url;
+  }
+
+  </script>
+</body>
+</html>
